@@ -1,0 +1,13 @@
+compiler = clang++
+cflags = -std=c++11
+ldflags = -lfreeimage
+
+rule cc
+    command = $compiler $cflags -c $in -o $out
+
+rule link
+    command = $compiler $ldflags -o $out $in
+
+build mandelbrot: link mandelbrot.o save_image.o
+build mandelbrot.o: cc mandelbrot.cpp
+build save_image.o: cc save_image.cpp

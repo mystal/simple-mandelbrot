@@ -1,0 +1,5 @@
+*.o
+mandelbrot
+*.png
+.*.swp
+.ninja_log
