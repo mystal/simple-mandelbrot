@@ -59,28 +59,15 @@ void fractal(window<int> &screen, window<double> &fract, int iterMax, vector<int
     plot(screen, colors, iterMax, fname, smoothColor);
 }
 
-void mandelbrot() {
-    // Define the size of the image
-    window<int> screen(0, 1200, 0, 1200);
-    // The domain in which we test for points
-    window<double> fract(-2.2, 1.2, -1.7, 1.7);
-
+void mandelbrot(window<int> &screen, window<double> &fract, int iterMax, bool smoothColor) {
     // The function used to calculate the fractal
     auto func = [] (complex<double>z, complex<double> c) -> complex<double> {
         return (z*z) + c;
     };
 
-    int iterMax = 500;
     const char *fname = "mandelbrot.png";
-    bool smoothColor = true;
     vector<int> colors(screen.size());
 
     // Loop over all pixels in screen and check membership in the Mandelbrot Set
     fractal(screen, fract, iterMax, colors, func, fname, smoothColor);
-}
-
-int main() {
-    mandelbrot();
-
-    return 0;
 }
