@@ -2,4 +2,4 @@
 
 #include "window.h"
 
-void mandelbrot(window<int> &, window<double> &, int, bool);
+void mandelbrot(window<int> &, window<double> &, int, bool, const char *fname);
