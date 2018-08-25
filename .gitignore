@@ -3,3 +3,4 @@ mandelbrot
 *.png
 .*.swp
 .ninja_log
+.ninja_deps
