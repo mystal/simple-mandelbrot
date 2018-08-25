@@ -1,6 +1,6 @@
 compiler = clang++
 cflags = -std=c++11 -g
-ldflags = -lfreeimage
+ldflags = -lfreeimage -lOpenCL
 
 rule cc
     command = $compiler $cflags -c $in -o $out
