@@ -1,6 +1,6 @@
 *.o
 mandelbrot
 *.png
-.*.swp
+.*.sw?
 .ninja_log
 .ninja_deps
